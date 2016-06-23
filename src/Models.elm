@@ -14,7 +14,7 @@ type alias Model =
 
 
 initialModel : Routing.Route -> Model
-initialModel =
+initialModel route =
   { players = []
   , route = route
   }
