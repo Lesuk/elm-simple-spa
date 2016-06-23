@@ -1,6 +1,7 @@
 module Players.Update exposing (..)
 
 
+import Navigation
 import Players.Messages exposing (Msg(..))
 import Players.Models exposing (Player)
 
@@ -14,3 +15,9 @@ update msg players =
 
     FetchAllFail error ->
       (players, Cmd.none)
+
+    ShowPlayers ->
+      ( players, Navigation.modifyUrl "#players" )
+
+    ShowPlayer id ->
+      ( players, Navigation.modifyUrl ("#players/" ++ (toString id)) )
