@@ -1,1 +1,6 @@
-elm-stuff/
+intro_app
+elm-stuff
+node_modules
+elm.js
+npm-debug.log
+.DS_Store
